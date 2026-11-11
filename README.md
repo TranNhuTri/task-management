@@ -26,9 +26,9 @@ A REST API for managing tasks (basic CRUD), built with **FastAPI** and **Postgre
 | POST   | `/tasks`      | Create a task                                   | 201 / 422       |
 | GET    | `/tasks`      | List tasks (`skip`, `limit`, `status` filter)   | 200             |
 | GET    | `/tasks/{id}` | Get a task                                      | 200 / 404       |
-| PUT    | `/tasks/{id}` | Partial update (only the fields sent change)    | 200 / 404 / 422 |
+| PATCH  | `/tasks/{id}` | Partial update (only the fields sent change)    | 200 / 404 / 422 |
 | DELETE | `/tasks/{id}` | Delete a task                                   | 204 / 404       |
-| GET    | `/health`     | Health check, including the DB connection       | 200             |
+| GET    | `/health`     | Health check: DB connection + deployed version  | 200 / 503       |
 
 A task has `id`, `title`, `description`, `status` (`todo` / `in_progress` / `done`), `created_at` and `updated_at`.
 Interactive docs (Swagger UI) are served at `http://localhost:8000/docs` once the app is running.
