@@ -22,6 +22,9 @@ Feature: `$ARGUMENTS`
      unknown ids, wrong types, and DB-down situations where relevant.
    - Test scenarios: IDs like `TC-<AREA>-01`, one row per behaviour, covering the happy path,
      every validation rule and every status code in the contract.
+   - Go through every group of the coverage checklist in the template (section 4 comment). For
+     each group, add scenarios or note why it does not apply, then remove the comment from the spec.
+     Finally, re-read the scenarios and ask yourself which edge case is still missing.
    - Anything undecided goes under **Open:** in section 3. Do not invent decisions silently.
    - For CI/CD features, replace "Contract" with the pipeline jobs, and list every manual step
      (GitHub, GHCR, Render, Neon) as numbered instructions the user can follow.
